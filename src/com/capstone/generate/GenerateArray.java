@@ -1,10 +1,22 @@
 package com.capstone.generate;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class GenerateArray {
     static Random random = new Random();
     static int arrLength ;
+
+    // generate a Sorted Integer Array
+    public static int [] getSortIntArray(){
+        arrLength = random.nextInt(50)+1;
+        int arr[] = new int[arrLength];
+        for(int i=0;i<arrLength;i++){
+            arr[i] = GenerateInt.getShort();
+        }
+        Arrays.sort(arr);
+        return arr;
+    }
 
     // generate an Integer Array
     public static int [] getIntArray(){
