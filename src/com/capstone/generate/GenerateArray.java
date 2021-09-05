@@ -18,6 +18,7 @@ public class GenerateArray {
         return arr;
     }
 
+
     // generate an Integer Array
     public static int [] getIntArray(){
         arrLength = random.nextInt(50)+1;
@@ -140,7 +141,7 @@ public class GenerateArray {
         return arr;
     }
 
-    // generates a Positive Matrix
+    // generates a Negative Matrix
     public static int [][] getNegMat(){
         int n = random.nextInt(10)+1;
         int m = random.nextInt(10)+1;

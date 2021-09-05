@@ -9,9 +9,7 @@ import com.capstone.generate.GenerateInt;
 public class Main {
     public static void main(String[] args) {
 
-        int []arr = GenerateArray.getSortIntArray();
-        for(int i=0;i<arr.length;i++){
-            System.out.println(arr[i]);
-        }
+        String arr = GenerateString.getPhrase();
+        System.out.println(arr);
     }
 }

@@ -43,6 +43,7 @@ public class GenerateString {
         int phraseLength = random.nextInt(10)+1;
         for(int i=0;i<phraseLength;i++){
             string += GenerateString.getWord();
+            string += " ";
         }
         return string;
     }
