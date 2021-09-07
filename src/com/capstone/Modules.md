@@ -1,4 +1,4 @@
-com.capstone.generate - 4 Class - 35 Methods
+com.capstone.generate - 4 Class - 42 Methods
     GenerateInt - 7 Methods
         public static short getShort()
         public static short getPosShort()
@@ -16,7 +16,7 @@ com.capstone.generate - 4 Class - 35 Methods
         public static char getParaChar()
         public static char getBracketChar()
         public static char getChar()
-    GenerateString - 8 Methods
+    GenerateString - 10 Methods
         public static String getWord()
         public static String getLowerWord()
         public static String getUpperWord()
@@ -25,7 +25,9 @@ com.capstone.generate - 4 Class - 35 Methods
         public static String getParaWord()
         public static String getBracketWord()
         public static String getBinWord()
-    GenerateArray - 12 Methods
+        public static String getLowerSortWord()
+        public static String getUpperSortWord()
+    GenerateArray - 18 Methods
         public static int [] getIntArray()
         public static int [] getPosArray()
         public static int [] getNegArray()
@@ -38,8 +40,12 @@ com.capstone.generate - 4 Class - 35 Methods
         public static int [][] getMat()
         public static int [][] getPosMat()
         public static int [][] getNegMat()
-
-        
+        public static Integer [] getSortIntArray()
+        public static int [] getSortIntArray(int a,int b)
+        public static Integer [] getDescIntArray(int a,int b)
+        public static Integer [] getIntArray(int a,int b)
+        public static Integer [][] getMat(int a,int b)
+        public static Integer [][] getSqrMat(int a,int b)
 
 ------------- Future Work --------------
     GenerateFloat

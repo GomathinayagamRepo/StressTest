@@ -1,16 +1,17 @@
 package com.capstone.generate;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
 
 public class GenerateArray {
     static Random random = new Random();
     static int arrLength ;
 
-    // generate a Sorted Integer Array
-    public static int [] getSortIntArray(){
+    // generates a Sorted Integer Array
+    public static Integer [] getSortIntArray(){
         arrLength = random.nextInt(50)+1;
-        int arr[] = new int[arrLength];
+        Integer arr[] = new Integer[arrLength];
         for(int i=0;i<arrLength;i++){
             arr[i] = GenerateInt.getShort();
         }
@@ -18,21 +19,52 @@ public class GenerateArray {
         return arr;
     }
 
-
-    // generate an Integer Array
-    public static int [] getIntArray(){
+    // generates a Sorted Integer Array
+    public static Integer [] getSortIntArray(int a,int b){
         arrLength = random.nextInt(50)+1;
-        int arr[] = new int[arrLength];
+        Integer arr[] = new Integer[arrLength];
+        for(int i=0;i<arrLength;i++){
+            arr[i] = GenerateInt.getInt(a,b);
+        }
+        Arrays.sort(arr);
+        return arr;
+    }
+
+    // generates a Sorted Integer Array in DESC
+    public static Integer [] getDescIntArray(int a,int b){
+        arrLength = random.nextInt(50)+1;
+        Integer arr[] = new Integer[arrLength];
+        for(int i=0;i<arrLength;i++){
+            arr[i] = GenerateInt.getInt(a,b);
+        }
+        Arrays.sort(arr, Collections.reverseOrder());
+        return arr;
+    }
+
+    // generates an Integer Array
+    public static Integer [] getIntArray(){
+        arrLength = random.nextInt(50)+1;
+        Integer arr[] = new Integer[arrLength];
         for(int i=0;i<arrLength;i++){
             arr[i] = GenerateInt.getShort();
         }
         return arr;
     }
 
-    // generates a Positive Integer Array
-    public static int [] getPosArray(){
+    // generates an Integer Array in a range
+    public static Integer [] getIntArray(int a,int b){
         arrLength = random.nextInt(50)+1;
-        int arr[] = new int[arrLength];
+        Integer arr[] = new Integer[arrLength];
+        for(int i=0;i<arrLength;i++){
+            arr[i] = GenerateInt.getInt(a,b);
+        }
+        return arr;
+    }
+
+    // generates a Positive Integer Array
+    public static Integer [] getPosArray(){
+        arrLength = random.nextInt(50)+1;
+        Integer arr[] = new Integer[arrLength];
         for(int i=0;i<arrLength;i++){
             arr[i] = GenerateInt.getPosShort();
         }
@@ -40,9 +72,9 @@ public class GenerateArray {
     }
 
     // generates a negative Integer Array
-    public static int [] getNegArray(){
+    public static Integer [] getNegArray(){
         arrLength = random.nextInt(50)+1;
-        int arr[] = new int[arrLength];
+        Integer arr[] = new Integer[arrLength];
         for(int i=0;i<arrLength;i++){
             arr[i] = GenerateInt.getNegShort();
         }
@@ -80,9 +112,9 @@ public class GenerateArray {
     }
 
     // generates a Positive Square Matrix
-    public static int [][] getPosSqrMat(){
+    public static Integer [][] getPosSqrMat(){
         int n = random.nextInt(10)+1;
-        int arr[][] = new int[n][n];
+        Integer arr[][] = new Integer[n][n];
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
                 arr[i][j] = GenerateInt.getPosShort();
@@ -92,9 +124,9 @@ public class GenerateArray {
     }
 
     // generates a Negative Square Matrix
-    public static int [][] getNegSqrMat(){
+    public static Integer [][] getNegSqrMat(){
         int n = random.nextInt(10)+1;
-        int arr[][] = new int[n][n];
+        Integer arr[][] = new Integer[n][n];
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
                 arr[i][j] = GenerateInt.getNegShort();
@@ -104,9 +136,9 @@ public class GenerateArray {
     }
 
     // generates a Square Matrix
-    public static int [][] getSqrMat(){
+    public static Integer [][] getSqrMat(){
         int n = random.nextInt(10)+1;
-        int arr[][] = new int[n][n];
+        Integer arr[][] = new Integer[n][n];
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
                 arr[i][j] = GenerateInt.getShort();
@@ -115,11 +147,23 @@ public class GenerateArray {
         return arr;
     }
 
+    // generates a Square Matrix in range
+    public static Integer [][] getSqrMat(int a,int b){
+        int n = random.nextInt(10)+1;
+        Integer arr[][] = new Integer[n][n];
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                arr[i][j] = GenerateInt.getInt(a,b);
+            }
+        }
+        return arr;
+    }
+
     // generates a Matrix
-    public static int [][] getMat(){
+    public static Integer [][] getMat(){
         int n = random.nextInt(10)+1;
         int m = random.nextInt(10)+1;
-        int arr[][] = new int[n][m];
+        Integer arr[][] = new Integer[n][m];
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
                 arr[i][j] = GenerateInt.getShort();
@@ -128,11 +172,24 @@ public class GenerateArray {
         return arr;
     }
 
-    // generates a Positive Matrix
-    public static int [][] getPosMat(){
+    // generates a Matrix in range
+    public static Integer [][] getMat(int a,int b){
         int n = random.nextInt(10)+1;
         int m = random.nextInt(10)+1;
-        int arr[][] = new int[n][m];
+        Integer arr[][] = new Integer[n][m];
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                arr[i][j] = GenerateInt.getInt(a,b);
+            }
+        }
+        return arr;
+    }
+
+    // generates a Positive Matrix
+    public static Integer [][] getPosMat(){
+        int n = random.nextInt(10)+1;
+        int m = random.nextInt(10)+1;
+        Integer arr[][] = new Integer[n][m];
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
                 arr[i][j] = GenerateInt.getPosShort();
@@ -142,10 +199,10 @@ public class GenerateArray {
     }
 
     // generates a Negative Matrix
-    public static int [][] getNegMat(){
+    public static Integer [][] getNegMat(){
         int n = random.nextInt(10)+1;
         int m = random.nextInt(10)+1;
-        int arr[][] = new int[n][m];
+        Integer arr[][] = new Integer[n][m];
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
                 arr[i][j] = GenerateInt.getNegShort();

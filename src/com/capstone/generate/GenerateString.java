@@ -1,5 +1,6 @@
 package com.capstone.generate;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class GenerateString {
@@ -27,6 +28,19 @@ public class GenerateString {
         return string;
     }
 
+    // generates a sorted string with lower case
+    public static String getLowerSortWord(){
+        String string = "";
+        stringLength = random.nextInt(29)+1;
+        for(int i=0;i<stringLength;i++) {
+            string += GenerateChar.getLowerAlpha();
+        }
+        char[] chars=string.toCharArray();
+        Arrays.sort(chars);
+        string=new String(chars);
+        return string;
+    }
+
     // generates a string with upper case
     public static String getUpperWord(){
         String string = "";
@@ -34,6 +48,19 @@ public class GenerateString {
         for(int i=0;i<stringLength;i++){
             string += GenerateChar.getUpperAlpha();
         }
+        return string;
+    }
+
+    // generate a sorted string with uppercase
+    public static String getUpperSortWord(){
+        String string = "";
+        stringLength = random.nextInt(29)+1;
+        for(int i=0;i<stringLength;i++){
+            string += GenerateChar.getUpperAlpha();
+        }
+        char[] chars = string.toCharArray();
+        Arrays.sort(chars);
+        string = new String(chars);
         return string;
     }
 
